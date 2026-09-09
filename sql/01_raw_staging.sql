@@ -1,4 +1,6 @@
-CREATE TABLE IF NOT EXISTS raw_trips (
+DROP TABLE IF EXISTS raw_trips;
+
+CREATE TABLE raw_trips (
     vendorid                INT,
     tpep_pickup_datetime     TIMESTAMP,
     tpep_dropoff_datetime    TIMESTAMP,
@@ -16,5 +18,6 @@ CREATE TABLE IF NOT EXISTS raw_trips (
     tolls_amount             NUMERIC,
     improvement_surcharge    NUMERIC,
     total_amount             NUMERIC,
-    congestion_surcharge     NUMERIC
+    congestion_surcharge     NUMERIC,
+    airport_fee              NUMERIC
 );
